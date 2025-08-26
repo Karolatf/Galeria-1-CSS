@@ -1,0 +1,106 @@
+/* Fuente global */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(63, 81, 181, 0.85);
+  color: white;
+}
+
+/* Galería completa (3)(4)(5)(6)(7)(16) */
+.galeria {
+  padding: 2rem;
+  text-align: center;
+  background-color: rgba(255,255,255,0.6);
+  background: url("img/FondoDragonBall.webp") no-repeat center center fixed;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 95vw;
+  min-height: 90vh;
+  margin: 0 auto;
+}
+
+.galeria h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.contenedor-galeria {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Cards base */
+.card {
+  display: inline-block; /* no grid ni flex */
+  vertical-align: top;
+  width: 180px;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+  background: white;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Ejemplos de colores (1 y 2) */
+.card-hex {
+  background-color: #009688;
+  color: white;
+}
+
+.card-rgb1 {
+  background-color: rgb(200,50,50);
+  color: white;
+}
+
+.card-rgb2 {
+  background-color: rgb(50,150,200);
+  color: black;
+}
+
+/* Gradientes (8 y 9) */
+.card-gradiente-lineal {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+}
+.card-gradiente-radial {
+  background: radial-gradient(circle, #a1c4fd, #c2e9fb);
+  color: black;
+}
+
+/* Texto (10)(12)(13)(14) */
+.card p {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  font-size: 1rem; 
+  font-style: italic;
+  font-weight: 500;
+  margin-top: 0.5em; 
+}
+
+/* Imágenes (17)(18) */
+.card img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+}
