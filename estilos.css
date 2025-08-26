@@ -1,8 +1,11 @@
-/* Fuente global */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+:root { font-size: 16px; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
+  font-family: 'Poppins', Arial, sans-serif;
   background: #f8f9fa;
   color: #333;
 }
@@ -10,97 +13,116 @@ body {
 header {
   text-align: center;
   padding: 2rem;
-  background: rgba(63, 81, 181, 0.85);
-  color: white;
-}
-
-/* Galería completa (3)(4)(5)(6)(7)(16) */
-.galeria {
-  padding: 2rem;
-  text-align: center;
-  background-color: rgba(255,255,255,0.6);
-  background: url("img/FondoDragonBall.webp") no-repeat center center fixed;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  width: 95vw;
-  min-height: 90vh;
-  margin: 0 auto;
-}
-
-.galeria h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  background: rgba(63,81,181,0.85);
   color: #fff;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+header h1 { font-size: 2rem; letter-spacing: 2px; }
+
+.galeria {
+  background-color: rgba(255,255,255,0.6); 
+  background-image: url("galeria/imagenes/fondo.jpg"); 
+  background-repeat: no-repeat;
+  background-position: center top; 
+  background-size: cover; 
+  background-attachment: fixed; 
+  text-align: center;
+  width: 95vw;  
+  min-height: 90vh; 
+  padding: 2rem;
+  margin: 0 auto;
 }
 
 .contenedor-galeria {
   max-width: 1300px;
   margin: 0 auto;
+  text-align: center;
 }
 
-/* Cards base */
 .card {
-  display: inline-block; /* no grid ni flex */
+  display: inline-block;
   vertical-align: top;
   width: 180px;
-  margin: 0.5rem;
-  padding: 0.5rem;
+  margin: 1em; 
+  padding: 1em; 
   border-radius: 8px;
+  background: #d5bbbb;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   text-align: center;
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
-  background: white;
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+.card:hover { transform: translateY(-6px) scale(1.03); box-shadow: 0 6px 18px rgba(0,0,0,0.18); }
 
-.card:hover {
-  transform: scale(1.05);
-}
-
-/* Ejemplos de colores (1 y 2) */
-.card-hex {
-  background-color: #009688;
-  color: white;
-}
-
-.card-rgb1 {
-  background-color: rgb(200,50,50);
-  color: white;
-}
-
-.card-rgb2 {
-  background-color: rgb(50,150,200);
-  color: black;
-}
-
-/* Gradientes (8 y 9) */
-.card-gradiente-lineal {
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
-  color: white;
-}
-.card-gradiente-radial {
-  background: radial-gradient(circle, #a1c4fd, #c2e9fb);
-  color: black;
-}
-
-/* Texto (10)(12)(13)(14) */
-.card p {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-  font-size: 1rem; 
-  font-style: italic;
-  font-weight: 500;
-  margin-top: 0.5em; 
-}
-
-/* Imágenes (17)(18) */
 .card img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
+  display: block;
+  width: 100%;
+  max-width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+  border-radius: 6px;
+}
+
+.card p {
+  margin-top: 0.6em;
+  font-size: 1rem; 
+  font-style: italic; 
+  font-weight: 500; 
+}
+
+.card-hex { background-color: #009688; color: #fff; border: 2px solid #004d40; } 
+.card-hex2 { background-color: #4caf50; color: #fff; border: 2px solid #2e7d32; } 
+
+.card-rgb1 { background-color: rgb(200,50,50); color: #fff; } 
+.card-rgb2 { background-color: rgb(50,150,200); color: #000; } 
+.card-rgb3 { background-color: rgb(255,165,0); color: #000; } 
+.card-rgb4 { background-color: rgb(120,80,180); color: #fff; } 
+.card-rgb5 { background-color: rgb(20,160,120); color: #fff; } 
+
+.card-gradiente-lineal {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); color:#fff;
+} 
+
+.card-gradiente-radial {
+  background: radial-gradient(circle at 40% 30%, #ff9a9e 0%, #fecfef 40%, #c471ed 100%);
+  color: #2c3e50;
+} 
+
+.card-hex p {
+  text-transform: uppercase; letter-spacing: 2px; text-shadow: 1px 1px 3px rgba(0,0,0,0.25);
+} 
+
+.card-rgb1 p { font-size: 1.1rem; font-style: italic; font-weight: 700; } 
+.card-rgb2 p { font-size: 18px; font-style: normal; font-weight: 500; } 
+.card-rgb3 p { font-size: 1.25rem; } 
+.card-rgb4 { margin: 1.25em; padding: 1em; } 
+
+.contenedor-galeria .card:nth-of-type(1) p { font-size: 16px; } 
+.contenedor-galeria .card:nth-of-type(2) p { font-size: 1.2em; } 
+.contenedor-galeria .card:nth-of-type(3) p { font-size: 1.2rem; } 
+
+footer {
+  text-align: center;
+  padding: 1.2rem;
+  background: #009688;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+.card-uniforme {
+  width: 200px;
+  height: 280px;
+}
+
+
+.card-uniforme img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; 
+}
+
+.card-uniforme img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;  /* no recorta la imagen */
+  background: #fff;     /* cambia si quieres otro color de fondo */
   border-radius: 6px;
 }
